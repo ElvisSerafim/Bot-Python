@@ -2,4 +2,4 @@ fake_useragent
 pyautogui 
 requests 
 undetected-chromedriver 
-selenium-wire
+selenium-wire==4.1.0
