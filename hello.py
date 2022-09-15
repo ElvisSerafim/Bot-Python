@@ -56,8 +56,8 @@ def create_driver(lines):
     print(f"Proxy sendo utilizado: {PROXY}")
     options = {
     'proxy': {
-        'http': f'http://{PROXY}',
-        'https': f'http://{PROXY}',
+        'http': f'http://127.0.0.1',
+        'https': f'http://127.0.0.1',
         'no_proxy': 'localhost,127.0.0.1'
         }
     }
@@ -66,7 +66,7 @@ def create_driver(lines):
     # print(userAgent)
     # chrome = uc.Chrome(options=options)
     # chrome.execute_cdp_cmd('Network.setUserAgentOverride', {"userAgent": userAgent})
-    chrome = Chrome(seleniumwire_options=options)
+    chrome = Chrome()
     # print(dir(chrome))
     countProxy = countProxy + 1
     return chrome
